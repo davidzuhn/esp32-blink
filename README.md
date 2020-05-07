@@ -1,3 +1,6 @@
+![CI](https://github.com/davidzuhn/esp32-blink/workflows/CI/badge.svg)
+
+
 # Blink Example
 
 Starts a FreeRTOS task to blink an LED
