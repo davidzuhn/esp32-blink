@@ -39,5 +39,5 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: ${{ env.name }}
-        path: ${{ github.workspace }}/build/${{ env.name }}*
+        path: ${{ github.workspace }}/build/blink*
         
