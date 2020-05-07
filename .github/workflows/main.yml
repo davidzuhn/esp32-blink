@@ -38,6 +38,6 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: ${{ github.repository }}-${{ github.sha }}.zip
+        name: esp32-blink-${{ github.sha }}.zip
         path: ${{ github.workspace }}/build/blink*
         
