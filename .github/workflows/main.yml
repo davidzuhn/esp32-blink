@@ -27,6 +27,9 @@ jobs:
     - name: List the repository content
       run: ls -lR
 
+    - name: Print working directory
+      run: /bin/pwd
+
     - name: Run the build
       run: docker run --rm -v $PWD:/project -w /project espressif/idf:release-v4.0 idf.py build
 
