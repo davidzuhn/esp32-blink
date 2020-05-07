@@ -16,7 +16,7 @@ jobs:
   checkout:
     runs-on: ubuntu-latest
     container:
-      image: espressif/idf:v4.0
+      image: espressif/idf:release-v4.0
       volumes:
         - $PWD:/project
 
