@@ -30,6 +30,13 @@ jobs:
     - name: Print working directory
       run: /bin/pwd
 
+    - name: Print environment
+      run: env | sort
+
     - name: Run the build
       run: docker run --rm -v $PWD:/project -w /project espressif/idf:release-v4.0 idf.py build
 
+    - uses: actions/upload-artifact@v2
+      with:
+        name: image
+        path: build/blink.bin
