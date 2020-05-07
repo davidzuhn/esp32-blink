@@ -18,7 +18,7 @@ jobs:
     container:
       image: espressif/idf:release-v4.0
       volumes:
-        - $PWD:/project
+        - .:/project
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
