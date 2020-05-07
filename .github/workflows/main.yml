@@ -37,6 +37,11 @@ jobs:
       run: docker run --rm -v $PWD:/project -w /project espressif/idf:release-v4.0 idf.py build
 
     - uses: actions/upload-artifact@v2
-      with:
-        name: image
-        path: build/blink.bin
+      - with:
+          name: image
+          path: build/blink.bin
+
+      - with:
+          name: ${{ env.name }}
+          path: ${{ github.workspace }}/build/
+        
