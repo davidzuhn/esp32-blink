@@ -13,12 +13,8 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  checkout:
+  buildt:
     runs-on: ubuntu-latest
-    container:
-      image: espressif/idf:release-v4.0
-      volumes:
-        - .:/project
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -30,4 +26,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: List the repository content
       run: ls -lR
+
+    - name: Run the build
+      run: docker run --rm -v $PWD:/project -w /project espressif/idf:release-v4.0 idf.py build
 
